@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Online Electronic Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Mobiles</a></li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#" style="font-size: medium;">Accessories</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <div class="product">
+        <img src="phone.png" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>Flagship smartphone with 128GB storage, 8GB RAM, and a 6.5-inch AMOLED display.</p>
+        <p><strong>699.99</strong></p>
+        <button onclick="addToCart('Smartphone', 699.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="laptop.png" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Ultra-slim laptop with Intel Core i7, 16GB RAM, 512GB SSD, and a 14-inch 4K display.</p>
+        <p><strong>1299.99</strong></p>
+        <button onclick="addToCart('Laptop', 1299.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="headphone.png" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Noise-cancelling over-ear headphones with 30-hour battery life and premium sound quality.</p>
+        <p><strong>249.99</strong></p>
+        <button onclick="addToCart('Headphones', 249.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="smartwatch.png" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Smartwatch with heart rate monitoring, GPS, sleep tracking, and 7-day battery life.</p>
+        <p><strong>199.99</strong></p>
+        <button onclick="addToCart('Smartwatch', 199.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="tablet.png" alt="Tablet">
+        <h3>Tablet</h3>
+        <p>10-inch tablet with 128GB storage, 6GB RAM, and a high-resolution display for productivity.</p>
+        <p><strong>499.99</strong></p>
+        <button onclick="addToCart('Tablet', 499.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="camara.png" alt="Camera">
+        <h3>Camera</h3>
+        <p>Mirrorless camera with 24MP sensor, 4K video recording, and interchangeable lenses.</p>
+        <p><strong>899.99</strong></p>
+        <button onclick="addToCart('Camera', 899.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="airpods.png" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>True wireless earbuds with active noise cancellation and 24-hour battery life.</p>
+        <p><strong>149.99</strong></p>
+        <button onclick="addToCart('Wireless Earbuds', 149.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <img src="gaming.png" alt="Gaming Console">
+        <h3>Gaming Console</h3>
+        <p>Next-gen gaming console with 1TB storage, 4K gaming, and VR support.</p>
+        <p><strong>499.99</strong></p>
+        <button onclick="addToCart('Gaming Console', 499.99)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <section class="cart" id="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button onclick="clearCart()">Empty Cart</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
